@@ -6,6 +6,8 @@ stage('Build')
 {
 steps{
 echo "Building the Project.........."
+sh 'touch build-stage.txt'
+sh 'ls'
 }
 }
 stage('Test') 
@@ -18,6 +20,7 @@ stage('Deploy')
 {
 steps{
 echo "Deploying the Project.........."
+  sh 'touch deploy-stage.txt'
 }
 }
 }
